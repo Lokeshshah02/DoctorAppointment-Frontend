@@ -4,6 +4,8 @@ import axios from "axios";
 
 const DoctorList = () => {
   const [doctors, setDoctors] = useState([]);
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
 
   useEffect(() => {
     const titleToFind = new URLSearchParams(window.location.search).get(
@@ -12,7 +14,7 @@ const DoctorList = () => {
     if (titleToFind) {
       axios
         .get(
-          `http://localhost:5555/doctors?title=${encodeURIComponent(
+          `https://lighthearted-pony-864432.netlify.app/doctors?title=${encodeURIComponent(
             titleToFind
           )}`
         )
