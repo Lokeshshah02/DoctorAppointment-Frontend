@@ -14,7 +14,7 @@ const DoctorList = () => {
     if (titleToFind) {
       axios
         .get(
-          `backendUrl/doctors?title=${encodeURIComponent(
+          `${backendUrl}/doctors?title=${encodeURIComponent(
             titleToFind
           )}`
         )
