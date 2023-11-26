@@ -14,7 +14,7 @@ const DoctorList = () => {
     if (titleToFind) {
       axios
         .get(
-          `https://lighthearted-pony-864432.netlify.app/doctors?title=${encodeURIComponent(
+          `backendUrl/doctors?title=${encodeURIComponent(
             titleToFind
           )}`
         )
@@ -55,7 +55,7 @@ const DoctorList = () => {
                     Book Appointment
                     <br />
                     No Booking Fee
-                    
+
                   </button>
                 </div>
               </div>
